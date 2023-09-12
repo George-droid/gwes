@@ -493,7 +493,7 @@
     </div>
   </section>
 
-  <section class="section partners" data-section="section7">
+  <!-- <section class="section partners" data-section="section7">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -534,7 +534,7 @@
   
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section contact" data-section="section6">
     <div class="container">
@@ -612,24 +612,49 @@
  
     <script>
       const counters = document.querySelectorAll(".count");
-      const speed = 15;
+      // Function to check if an element is in the viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-      counters.forEach((counter) => {
-        const updateCount = () => {
-          const target = parseInt(+counter.getAttribute('data-target'));
-          const count = parseInt(+counter.innerText);
-          const increment = Math.trunc(target / 30);
-          
+// Function to start counting when the section is in the viewport
+function startCountingWhenInView() {
+  const counters = document.querySelectorAll(".count");
+  const speed = 30;
 
-          if (count < target) {
-            counter.innerText = count + increment;
-            setTimeout(updateCount, 1);
-          } else {
-            count.innerText = target;
-          }
-        };
-        updateCount();
-      });
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = parseInt(+counter.getAttribute("data-target"));
+      const count = parseInt(+counter.innerText);
+      const increment = Math.trunc(target / 30);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, speed);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    
+    // Check if the counter is in the viewport
+    if (isInViewport(counter)) {
+      updateCount();
+    }
+  });
+}
+
+// Add an event listener to the window's scroll event
+window.addEventListener("scroll", startCountingWhenInView);
+
+// Trigger counting for elements already in the viewport on page load
+window.addEventListener("load", startCountingWhenInView);
+
 
   </script>
 
@@ -683,27 +708,6 @@
           checkSection();
         });
     </script>
-
-<!-- <script>
-  // Initialize count-up animations when the page is fully loaded
-  window.addEventListener('load', function () {
-    // Graduates
-    const graduatesCounter = new CountUp('graduates-count', 0, 100);
-    graduatesCounter.start();
-
-    // Student Advisors
-    const advisorsCounter = new CountUp('advisors-count', 0, 25);
-    advisorsCounter.start();
-
-    // Universities
-    const universitiesCounter = new CountUp('universities-count', 0, 50);
-    universitiesCounter.start();
-
-    // Programs
-    const programsCounter = new CountUp('programs-count', 0, 4000);
-    programsCounter.start();
-  });
-</script> -->
 
 </body>
 </html>
