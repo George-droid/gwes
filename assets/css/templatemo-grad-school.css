@@ -8,7 +8,8 @@ https://templatemo.com/tm-557-grad-school
 
 
 @import url(fontawesome.css);
-@import url("<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -16,7 +17,7 @@ body {
 /* Basic */
 
 a {
-	color: #3CF;
+	 color: #3CF;
     text-decoration: none;
 }
 
@@ -35,6 +36,55 @@ p {
     font-size: 13px;
     line-height: 22px;
 }
+
+.ftco-section-counter {
+  position: relative;
+  height: 50vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(1, 6, 19), rgba(2, 20, 34, 0.832)), url(../images/courses-03.jpg);
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+  color:white;
+}
+
+/* Style the graduation cap icon */
+.fa-solid.fa-user-graduate {
+  font-size: 40px; 
+  color:white;
+}
+
+
+.fa-solid.fa-chalkboard-user {
+  font-size: 40px; 
+  color:white;
+}
+
+
+.fa-solid.fa-school {
+  font-size: 40px; 
+  
+  color:white; 
+}
+
+/* Style the book icon */
+.fa-solid.fa-book {
+  font-size: 40px; 
+  color:white;
+}
+
+
+
+
+
+
 
 
 .section-heading {
@@ -919,6 +969,8 @@ section.video .left-content h4 em {
 section.video .left-content .main-button {
   margin-top: 30px;
 }
+
+
 
 .video-item {
   position: relative;
