@@ -1578,6 +1578,55 @@ section.contact form button {
     border: none;
 }
 
+/* style for partners section */
+
+.partners-section{
+  background-image: url(../images/choosing-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #172238;
+ 
+}
+.partner-card {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: inline-block;
+ 
+}
+
+.partner-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.partner-title {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.partner-details p {
+  margin: 5px 0;
+}
+/* Carousel styles */
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel-container {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+
 /* Footer */
 
 footer {

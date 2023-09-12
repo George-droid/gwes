@@ -249,7 +249,7 @@
     </div>
   </section>  -->
 
-  <!-- Section for Achievements -->
+  <!-- Section for counter -->
 
   <section class="ftco-section-counter counter" id="counters-section" data-section="section0">
      
@@ -493,48 +493,109 @@
     </div>
   </section>
 
-  <!-- <section class="section partners" data-section="section7">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="section-heading">
-            <h2>We worked with <em>many partners</em> for last years</h2>
-          </div>
-        </div>
-        <div class="col">
-          <div class="owl-clients owl-carousel">
-            <div class="client-item">
-              <div class="card" style="width: 18rem;">
-                <img src="./assets/images/courses-01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">STUDY IN USA</h5>
-                  <p class="card-text">Study at the school of your dreams in the USA</p>
-                  <a href="#" class="btn btn-secondary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="client-item">
-              <img src="assets/images/client-01.png" alt="2">
-            </div>
-            <div class="client-item">
-              <img src="assets/images/client-01.png" alt="3">
-            </div>
-            <div class="client-item">
-              <img src="assets/images/client-01.png" alt="4">
-            </div>
-            <div class="client-item">
-              <img src="assets/images/client-01.png" alt="5">
-            </div>
-            <div class="client-item">
-              <img src="assets/images/client-01.png" alt="6">
-            </div>
-          </div>
-        </div>
-  
+  <section class="partners-section">
+    <div class="col-md-12">
+      <div class="section-heading">
+        <h2>OUR PARTNERS</h2>
       </div>
     </div>
-  </section> -->
+
+    <div class="carousel col-lg-12 h-100">
+      <div class="carousel-container">t
+        <div class="partner-card">
+          <img src="assets/images/usa.jpg" class="card-img-top" alt="partner-01">
+          <div class="partner-title "> Study In USA</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>University of Washington </p>
+            <p>University of California </p>
+            <p>University of Texas </p>
+        </div>
+        </div>
+
+        <div class="partner-card h-100 ">
+          <img src="assets/images/canada.jpg"  class="card-img-top" alt="partner-02">
+          <div class="partner-title"> Study In Canada</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>University of Toronto </p>
+            <p>University of British Columbia </p>
+            <p>University of Alberta </p>
+          </div>
+        </div>
+
+        <div class="partner-card h-100">
+          <img src="assets/images/london.jpg"  class="card-img-top" alt="partner-03">
+          <div class="partner-title"> Study In UK</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>University of Oxford </p>
+            <p>University of Cambridge </p>
+            <p>Imperial College London </p>
+          </div>
+        </div>
+
+        <div class="partner-card h-100">
+          <img src="assets/images/australia.jpg"  class="card-img-top" alt="partner-04">
+          <div class="partner-title"> Study In Australia</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>University of Melbourne </p>
+            <p>University of Sydney </p>
+            <p>University of Queensland </p>
+          </div>
+        </div>
+
+        <div class="partner-card h-100">
+          <img src="assets/images/germany.jpg"  class="card-img-top" alt="partner-05">
+          <div class="partner-title"> Study In Germany</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>Technical University of Munich </p>
+            <p>Ludwig Maximilian University of Munich </p>
+            <p>Heidelberg University </p>
+          </div>
+        </div>
+
+        <div class="partner-card h-100">
+          <img src="assets/images/france.jpg"  class="card-img-top" alt="partner-06">
+          <div class="partner-title"> Study In France</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>University of Paris </p>
+            <p>University of Montpellier </p>
+            <p>University of Strasbourg </p>
+          </div>
+        </div>
+
+        <div class="partner-card h-100">
+          <img src="assets/images/china.jpg"  class="card-img-top" alt="partner-07">
+          <div class="partner-title"> Study In China</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>Tsinghua University </p>
+            <p>Peking University </p>
+            <p>Zhejiang University </p>
+          </div>
+        </div>
+
+        <div class="partner-card h-100">
+          <img src="assets/images/singapore.jpg"  class="card-img-top" alt="partner-08">
+          <div class="partner-title"> Study In Singapore</div>
+          <div class="partner-details">
+            <p>We have partners in different schools </p>
+            <p>National University of Singapore </p>
+            <p>Nanyang Technological University </p>
+            <p>Singapore Management University </p>
+          </div>
+
+      </div>
+    </div>
+    <div class="carousel-controls justify-content-center">
+      <button id="prev-button">.</button>
+      <button id="next-button">.</button>
+  </div>
+  </section>
 
   <section class="section contact" data-section="section6">
     <div class="container">
@@ -708,6 +769,59 @@ window.addEventListener("load", startCountingWhenInView);
           checkSection();
         });
     </script>
+
+<script>
+  // JavaScript for custom carousel
+  const carousel = document.querySelector(".carousel");
+  const container = document.querySelector(".carousel-container");
+  const partnerCards = document.querySelectorAll(".partner-card");
+
+  let currentIndex = 0;
+  const cardWidth = partnerCards[0].offsetWidth;
+  const numCards = partnerCards.length;
+
+  function showCard(index) {
+      const translateX = -index * cardWidth;
+      container.style.transform = `translateX(${translateX}px)`;
+  }
+
+  function next() {
+      currentIndex = (currentIndex + 1) % numCards;
+      showCard(currentIndex);
+  }
+
+  function prev() {
+      currentIndex = (currentIndex - 1 + numCards) % numCards;
+      showCard(currentIndex);
+  }
+
+  const nextButton = document.getElementById("next-button");
+  const prevButton = document.getElementById("prev-button");
+
+  nextButton.addEventListener("click", next);
+  prevButton.addEventListener("click", prev);
+
+  carousel.addEventListener("mouseenter", () => {
+      // Pause the automatic sliding when the carousel is hovered over
+      clearInterval(interval);
+  });
+
+  carousel.addEventListener("mouseleave", () => {
+      // Resume automatic sliding when the carousel is not hovered over
+      startAutoSlide();
+  });
+
+  function startAutoSlide() {
+      interval = setInterval(next, 5000); // Adjust the interval as needed (3 seconds in this example)
+  }
+
+  let interval;
+  startAutoSlide();
+</script>
+
+
+
+
 
 </body>
 </html>
