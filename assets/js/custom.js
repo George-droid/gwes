@@ -104,3 +104,52 @@
 	})()
 
 })(jQuery);
+
+
+// Partner Carousel
+
+const carousel = document.querySelector(".carousel");
+const container = document.querySelector(".carousel-container");
+const partnerCards = document.querySelectorAll(".partner-card");
+
+let currentIndex = 0;
+const cardWidth = partnerCards[0].offsetWidth;
+const numCards = partnerCards.length;
+
+function showCard(index) {
+	const translateX = -index * cardWidth;
+	container.style.transform = `translateX(${translateX}px)`;
+}
+
+function next() {
+	currentIndex = (currentIndex + 1) % numCards;
+	showCard(currentIndex);
+}
+
+function prev() {
+	currentIndex = (currentIndex - 1 + numCards) % numCards;
+	showCard(currentIndex);
+}
+
+const nextButton = document.getElementById("next-button");
+const prevButton = document.getElementById("prev-button");
+
+nextButton.addEventListener("click", next);
+prevButton.addEventListener("click", prev);
+
+carousel.addEventListener("mouseenter", () => {
+	// Pause the automatic sliding when the carousel is hovered over
+	clearInterval(interval);
+});
+
+carousel.addEventListener("mouseleave", () => {
+	// Resume automatic sliding when the carousel is not hovered over
+	startAutoSlide();
+});
+
+function startAutoSlide() {
+	interval = setInterval(next, 5000); // Adjust the interval as needed (3 seconds in this example)
+}
+
+let interval;
+startAutoSlide();
