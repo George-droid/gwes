@@ -1723,7 +1723,7 @@ section.contact form button {
   
 }
 
-.nav-link.active {
+.nav-link .active {
   background-color:  #c4712e; /* Active tab background color */
   color: #fff; /* Active tab text color */
   border-color:#c4712e;
@@ -1741,6 +1741,7 @@ section.contact form button {
 .details a {
   margin-top: 10px;
   color: white;
+  font-size: medium;
 }
 
 
