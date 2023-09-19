@@ -1716,25 +1716,26 @@ section.contact form button {
 }
 
 /* Styling for the tabs */
+.post-tabs{
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 .nav-tabs {
   background-color : #172238;
-  border-bottom: 1px solid #dee2e6;
-  padding: 0px 20px;
-  
+  border-bottom: 1px solid ; /* Orange border color */
+  padding: 0px 20px; 
 }
 
-.nav-link .active {
-  background-color:  #c4712e; /* Active tab background color */
-  color: #fff; /* Active tab text color */
-  border-color:#c4712e;
-}
-
-.nav-link {
-  color: #333;
+.nav-pills .nav-link.active {
+  background-color: #c4712e; /* Orange background color */
+  color: #fff; /* White text color */
+  border-color: #c4712e; /* Orange border color (optional) */
 }
 
 /* Styling for the recent posts */
 .details {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 
@@ -1744,10 +1745,14 @@ section.contact form button {
   font-size: medium;
 }
 
+.details a:hover {
+  color: #f5a425;
+}
 
 .details li {
   color: #f5a425;
 }
+
 
 
 
