@@ -148,7 +148,7 @@ carousel.addEventListener("mouseleave", () => {
 });
 
 function startAutoSlide() {
-	interval = setInterval(next, 5000); // Adjust the interval as needed (3 seconds in this example)
+	interval = setInterval(next, 2000); // Adjust the interval as needed (3 seconds in this example)
 }
 
 let interval;

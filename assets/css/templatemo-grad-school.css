@@ -1590,7 +1590,7 @@ section.contact form button {
 
 .partner-card {
   width: 300px;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -1645,6 +1645,23 @@ section.contact form button {
 .carousel-controls button:hover {
   background-color: #172330; /* Button background color on hover */
 }
+
+.blogs-section{
+  background-image: url(../images/choosing-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #172238;
+  background-position: center center;
+}
+.thumb{
+  background-image: url(../images/choosing-bg.jpg);
+}
+.bordered {
+  border: solid 1px #EBEBEB;
+}
+
+
+
 
 /* Footer */
 
