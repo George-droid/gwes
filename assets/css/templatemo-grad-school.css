@@ -1646,19 +1646,109 @@ section.contact form button {
   background-color: #172330; /* Button background color on hover */
 }
 
+/* Styling for the blog section */
 .blogs-section{
   background-image: url(../images/choosing-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #172238;
   background-position: center center;
+  padding: 40px 0;
 }
-.thumb{
-  background-image: url(../images/choosing-bg.jpg);
+
+.section-heading h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
-.bordered {
-  border: solid 1px #EBEBEB;
+
+/* Styling for the featured post */
+.featured-post-lg {
+  background-image: url('your-background-image.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Text color for better visibility on the background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.featured-post-lg a {
+  color: #fff; /* Link color for better visibility on the background */
+  text-decoration: none;
+}
+
+/* Styling for the post content within featured-post-lg */
+.post-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Background overlay color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.category-badge {
+  background-color: #c4712e; /* Category badge background color */
+  color: #fff; /* Category badge text color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.post-excerpt {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-meta li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Styling for the tabs */
+.nav-tabs {
+  background-color : #172238;
+  border-bottom: 1px solid #dee2e6;
+  padding: 0px 20px;
+  
+}
+
+.nav-link.active {
+  background-color:  #c4712e; /* Active tab background color */
+  color: #fff; /* Active tab text color */
+  border-color:#c4712e;
+}
+
+.nav-link {
+  color: #333;
+}
+
+/* Styling for the recent posts */
+.details {
+  margin-bottom: 20px;
+}
+
+.details a {
+  margin-top: 10px;
+  color: white;
+}
+
+
+.details li {
+  color: #f5a425;
+}
+
+
 
 
 

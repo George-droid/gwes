@@ -105,6 +105,27 @@
 
 })(jQuery);
 
+  // Event listener to handle tab clicks
+  document.getElementById('popular-tab').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('popular').classList.add('active');
+    document.getElementById('popular-tab').classList.add('active');
+    document.getElementById('recent').classList.remove('active');
+    document.getElementById('recent-tab').classList.remove('active');
+  });
+
+  document.getElementById('recent-tab').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('recent').classList.add('active');
+    document.getElementById('recent-tab').classList.add('active');
+    document.getElementById('popular').classList.remove('active');
+    document.getElementById('popular-tab').classList.remove('active');
+  });
+
+  // Activate the 'popular' tab by default (optional)
+  document.getElementById('popular-tab').click();
+
+
 
 // Partner Carousel
 
