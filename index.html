@@ -134,7 +134,7 @@
             <ul>
               <li><a href='#tabs-1'>Expert Guidance</a></li>
               <li><a href='#tabs-2'>Test Preparation</a></li>
-              <li><a href='#tabs-3'>Quality Meeting</a></li>
+              <li><a href='#tabs-3'>Welfare Services</a></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
@@ -156,10 +156,9 @@
                     <img src="assets/images/choose-us-image-02.png" alt="">
                   </div>
                   <div class="col-md-6">
-                    <h4>Comprehensive Test Preparation</h4>
-                    <p>We go beyond professional advice to give complete exam preparation help, recognizing the crucial role of language proficiency examinations like IELTS, and TOEFL in gaining admissions overseas.</p> 
-                    <p>Our customized training programs, led by expert teachers, are precisely intended to equip you with the skills and tactics required to excel in these tests,
-                       assuring your preparation for the academic challenges ahead.</p>
+                    <h4>Accredited Test Preparation</h4>
+                    <p>We go beyond professional advice to give complete test preparation help, recognizing the crucial role of language proficiency examinations like IELTS, and TOEFL in gaining admissions overseas.</p> 
+                    <p>Our accredited training programs, led by expert teachers, are precisely intended to equip you with the skills and tactics required to excel in these tests.</p>
                   </div>
                 </div>
               </article>
@@ -169,8 +168,10 @@
                     <img src="assets/images/choose-us-image-03.png" alt="">
                   </div>
                   <div class="col-md-6">
-                    <h4>Quality Meeting</h4>
-                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
+                    <h4>Extensive Welfare Services</h4>
+                    <p>We offer extensive student welfare services, including assistance with accommodation and cultural adaptation, ensuring a seamless educational journey abroad</p>
+                    <p>Moreover, we foster strong partnerships with universities and colleges overseas, actively collaborating to enhance student welfare, academic success,
+                       and a mutually beneficial educational experience.</p>
                   </div>
                 </div>
               </article>
@@ -309,7 +310,7 @@
     </div>
   </section>
 
-  <section class="section courses" data-section="section4">
+  <!-- <section class="section courses" data-section="section4">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -464,7 +465,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="blogs-section">
     <div class="container-xl">
@@ -566,8 +567,8 @@
       <div class="row">
         <div class="col-md-6 align-self-center">
           <div class="left-content">
-            <span>our presentation is for you</span>
-            <h4>Watch the video to learn more <em>about Grad School</em></h4>
+            <span>Testimonial</span>
+            <h4>Meet a few successful <em>candidates of Goldenway</em></h4>
             <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> for details.
             <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
             <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External URL</a></div>
@@ -787,41 +788,41 @@
   <script>
       const counters = document.querySelectorAll(".count");
       // Function to check if an element is in the viewport
-    function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-// Function to start counting when the section is in the viewport
-  function startCountingWhenInView() {
-    const counters = document.querySelectorAll(".count");
-    const speed = 30;
-
-  counters.forEach((counter) => {
-    const updateCount = () => {
-      const target = parseInt(+counter.getAttribute("data-target"));
-      const count = parseInt(+counter.innerText);
-      const increment = Math.trunc(target / 30);
-
-      if (count < target) {
-        counter.innerText = count + increment;
-        setTimeout(updateCount, speed);
-      } else {
-        counter.innerText = target;
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
       }
-    };
-    
-    // Check if the counter is in the viewport
-    if (isInViewport(counter)) {
-      updateCount();
-    }
-  });
-}
+
+      // Function to start counting when the section is in the viewport
+        function startCountingWhenInView() {
+          const counters = document.querySelectorAll(".count");
+          const speed = 40;
+
+        counters.forEach((counter) => {
+          const updateCount = () => {
+            const target = parseInt(+counter.getAttribute("data-target"));
+            const count = parseInt(+counter.innerText);
+            const increment = Math.trunc(target / speed);
+
+            if (count < target) {
+              counter.innerText = count + increment;
+              setTimeout(updateCount, speed);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          
+          // Check if the counter is in the viewport
+          if (isInViewport(counter)) {
+            updateCount();
+          }
+        });
+      }
 
       // Add an event listener to the window's scroll event
       window.addEventListener("scroll", startCountingWhenInView);
